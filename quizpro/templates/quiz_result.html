@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+{% block content%}
+    <div class="result-container" style = >
+        <h2>Quiz: {{ quiz.title }}</h2>
+        <h1 style =  " color: #fff79c;">Score: <span class="score-box">{{ attempt.score }}</span></h1>
+        <a href="{% url 'quiz_list' %}" class="back-btn" style = "color: white;">Back to Quiz List</a>
+    </div>
+{% endblock %}

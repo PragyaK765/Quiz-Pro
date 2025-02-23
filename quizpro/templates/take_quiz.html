@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content%}
+    <div class="quiz-container">
+        <h2 style = "color:rgb(252, 186, 88);">{{ quiz.title }}</h2>
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{%endblock%}

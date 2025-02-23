@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+        {% for quiz in quizzes %}
+        <a href="{% url 'take_quiz' quiz.id %}">
+            <h2 style=" color: #fff79c;">{{ quiz.title }}</h2>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
