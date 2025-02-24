@@ -12,7 +12,6 @@ def contact_view(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            # Send email (modify these settings as needed)
             send_mail(
                 subject=f"New Contact Form Submission from {name}",
                 message=message,
